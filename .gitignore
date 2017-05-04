@@ -1,0 +1,11 @@
+.DS_Store
+log
+tmp/**/*
+bin/*
+vendor/gems/*
+blog/.asset-cache/
+.sass-cache/*
+.components
+/vendor
+_site
+.env

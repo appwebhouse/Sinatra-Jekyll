@@ -1,0 +1,10 @@
+source: blog
+permalink: /blog/:title/
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - views/
+  - app.rb
+  - config.ru
+  - Procfile
