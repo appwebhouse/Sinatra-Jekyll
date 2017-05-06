@@ -10,6 +10,7 @@ GEM
     colorator (1.1.0)
     concurrent-ruby (1.0.5)
     daemons (1.2.4)
+    dotenv (2.1.0)
     eventmachine (1.2.3)
     execjs (2.7.0)
     extras (0.1.0)
@@ -77,6 +78,7 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-script
+  dotenv
   jekyll
   jekyll-assets
   sinatra

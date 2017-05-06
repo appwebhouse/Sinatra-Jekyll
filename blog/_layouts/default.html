@@ -4,26 +4,29 @@
     <meta charset="utf-8">
     <title>My Awesome Static Website</title>
 
-    <!-- include css -->
     {% stylesheet app %}
-
 </head>
 <body>
-
-    <h3><a href="{{ post.url }}">{{ page.title }}</a></h3>
-    <p>
-      <small>
-        <strong>{{ page.date | date: "%B %e, %Y" }}</strong>
-        {{ page.category }}
-      </small>
-    </p>
+  <h3><a href="{{ post.url }}">{{ page.title }}</a></h3>
+  <p>
+    <small>
+      <strong>{{ page.date | date: "%B %e, %Y" }}</strong>
+      {{ page.category }}
+      {% if page.comments %}
+        <a href="//{{ page.url | prepend: site.baseurl }}#disqus_thread">
+          0 Comments
+        </a>
+      {% endif %}
+    </small>
+  </p>
 
   <div id="main">
     {{ content }}
   </div>
 
-  <!-- include javascript -->
-  {% javascript app %}
+  {% include disqus.html %}
 
+  {% javascript app %}
+  <script id="dsq-count-scr" src="//{{ site.env.DISQUS_SITE }}.disqus.com/count.js" async></script>
 </body>
 </html>
